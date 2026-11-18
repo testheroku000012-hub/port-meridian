@@ -1,0 +1,2 @@
+import { updatePolice } from './police.js';
+export function stageShot(name, world, mission) { if (name==='drive') { world.player.inCar=true; world.player.x=900; world.player.y=520; } if (name==='wanted') { world.player.wanted=3; world.player.inCar=true; world.player.x=1300; world.player.y=900; updatePolice(world,0); } if (name==='mission') { mission.index=0; world.player.x=470; world.player.y=420; } return name==='start'?'title':'play'; }
